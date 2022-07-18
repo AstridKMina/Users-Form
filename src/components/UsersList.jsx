@@ -20,6 +20,7 @@ const UsersList =  ({ users, selectUser, deleteUser}) => {
                     <div>
                         <h3>Birthday: {user.birthday}</h3>
                     </div>
+                    
                     <button onClick={() => selectUser(user)}> Edit</button>
                     <button onClick={() => deleteUser(user.id)}> Delete </button>
 

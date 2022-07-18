@@ -7,7 +7,7 @@ const UsersForm = ({ getUsers, userSelected, deselectUser }) => {
     const [password, setPassword] = useState("")
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
-    const [birthday, setBirthday] = useState(Date)
+    const [birthday, setBirthday] = useState("")
 
 
     useEffect(() => {
