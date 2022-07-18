@@ -1,0 +1,21 @@
+.App {
+  display: flex;
+  text-align: center;
+
+}
+
+.list {
+  display: flex;
+  flex-basis: 50%;
+}
+
+.form {
+  
+  display: flex;
+  flex-basis: 50%;
+}
+
+
+button {
+  font-size: calc(10px + 2vmin);
+}
