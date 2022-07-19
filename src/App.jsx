@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios';
 import './App.css'
-import UsersForm from './components/usersForm';
+import UsersForm from './components/UsersForm';
 import UsersList from './components/UsersList';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     axios.get("https://users-crud1.herokuapp.com/users/")
       .then(res => setUsers(res.data))
   }, [])
-  console.log(users)
+  // console.log(users)
 
 
   const getUsers = () => {
@@ -40,11 +40,27 @@ function App() {
 
   return (
     <div className="App">
-      <div className='form'>
-        <UsersForm getUsers={getUsers} userSelected={userSelected} deselectUser={deselectUser} />
+      <h1 className='name'>Users Form</h1>
+      <hr />
+      <div className='all'>
+        <div className='form'>
+          <UsersForm getUsers={getUsers} userSelected={userSelected} deselectUser={deselectUser} />
+        </div>
+        <div className='list'>
+          <UsersList users={users} selectUser={selectUser} deleteUser={deleteUser} />
+        </div>
       </div>
-      <div className='list'>
-        <UsersList users={users} selectUser={selectUser} deleteUser={deleteUser} />
+      <div className='burbujas'>
+        <div className="burbuja"></div>
+        <div className="burbuja"></div>
+        <div className="burbuja"></div>
+        <div className="burbuja"></div>
+        <div className="burbuja"></div>
+        <div className="burbuja"></div>
+        <div className="burbuja"></div>
+        <div className="burbuja"></div>
+        <div className="burbuja"></div>
+        <div className="burbuja"></div>
       </div>
     </div>
   )

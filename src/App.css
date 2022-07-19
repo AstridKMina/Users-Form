@@ -1,21 +1,312 @@
 .App {
-  display: flex;
-  text-align: center;
+  /* text-align: center; */
+  height: 100%;
+  font-family: papyrus;
+  color: white;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/001/230/968/non_2x/starry-night-sky-free-photo.jpeg");
+}
 
+.all {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  font-size: 8rem;
+  margin: 0;
+  padding: 3rem;
+
+}
+
+span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+/* List side */
+
+h2 {
+  text-align: center;
+  margin-left: 45%;
 }
 
 .list {
   display: flex;
+  flex-direction: column;
   flex-basis: 50%;
+  flex-grow: 1;
+  min-width: 25rem;
+  margin: 0 auto;
+  align-items: center;
 }
+
+.userslist {
+  right: 5rem;
+  top: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  margin: 1rem 2rem;
+  max-width: 40%;
+  justify-content: center;
+
+}
+
+.division {
+  position: relative;
+  display: flex;
+  height: 15rem;
+  width: 100%;
+  min-width: 30rem;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 1rem;
+  border-radius: 10%;
+  box-shadow: 1px 8px 15px 6px rgba(239, 237, 227, 0.726);
+}
+
+
+.myDivision {
+  display: flex;
+  flex-basis: 75%;
+  justify-content: center;
+
+}
+
+.division li {
+  position: absolute;
+  top: 3rem;
+  left: 1rem;
+  list-style: none;
+  line-height: 0.8;
+  margin: 0 auto;
+}
+
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 20%;
+  
+}
+
+.button {
+  cursor: pointer;
+  background-color: rgba(255,255,255,0.5);
+  min-width:2rem
+ 
+}
+
+/* Form side */
 
 .form {
-  
   display: flex;
+  flex-basis: 50%;
+  min-width: 25rem;
+  flex-grow: 1;
+  font-weight: bold;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.form h1 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+ 
+.userform {
+  display: flex;
+  flex-direction: column;
+  left: 5rem;
+  margin: 6rem 2rem;
+  flex-basis: 50%;
+
+  height: 40vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 8px 15px 6px rgba(239, 237, 227, 0.726);
+  border-radius: 2%;
+  padding: 1rem;
+  align-items: right;
+
+} 
+
+.divInput {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+}
+
+.divInput label {
+  margin-right: 1rem;
+}
+
+.myInput {
+  width: 82%;
+}
+
+input {
+  border-radius: 10%;
+  height: 1.2rem;
+  margin: 0.2rem;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: calc(8px + 1.1vmin);
   flex-basis: 50%;
 }
 
+.btn button {
+  font-family: papyrus;
+  width: 60%;
+  border-radius: 10%;
+  cursor: pointer;
+  background: rgba(255,255,255,0.7);
+  font-weight: bold;
+  color: rgb(54, 54, 160);
+}
 
-button {
-  font-size: calc(10px + 2vmin);
+::placeholder {
+  font-family: papyrus;
+}
+
+
+/* burbujas */
+
+.burbuja {
+  border-radius: 50%;
+  background: linear-gradient(to right, rgb(15, 9, 16), rgba(14, 1, 20, 0.726), rgb(201, 145, 220));
+  opacity: 1;
+
+  position: absolute;
+  bottom: 150;
+
+  animation: burbujas 3s linear infinite;
+}
+
+.burbuja:nth-child(1) {
+  width: 80px;
+  height: 80px;
+  left: 5%;
+  animation-duration: 3s;
+  animation-delay: 3s;
+}
+
+.burbuja:nth-child(2) {
+  width: 100px;
+  height: 100px;
+  left: 35%;
+  animation-duration: 3s;
+  animation-delay: 5s;
+}
+
+.burbuja:nth-child(3) {
+  width: 20px;
+  height: 20px;
+  left: 15%;
+  animation-duration: 1.5s;
+  animation-delay: 7s;
+}
+
+.burbuja:nth-child(4) {
+  width: 50px;
+  height: 50px;
+  left: 90%;
+  animation-duration: 6s;
+  animation-delay: 3s;
+}
+
+.burbuja:nth-child(5) {
+  width: 70px;
+  height: 70px;
+  left: 65%;
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+
+.burbuja:nth-child(6) {
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  animation-duration: 4s;
+  animation-delay: 5s;
+}
+
+.burbuja:nth-child(7) {
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  animation-duration: 4s;
+  animation-delay: 5s;
+}
+
+.burbuja:nth-child(8) {
+  width: 100;
+  height: 100px;
+  left: 52%;
+  animation-duration: 5s;
+  animation-delay: 5s;
+}
+
+.burbuja:nth-child(9) {
+  width: 65px;
+  height: 65px;
+  left: 51%;
+  animation-duration: 3s;
+  animation-delay: 2s;
+}
+
+.burbuja:nth-child(10) {
+  width: 40px;
+  height: 40px;
+  left: 35%;
+  animation-duration: 3s;
+  animation-delay: 4s;
+}
+
+
+@keyframes burbujas {
+  0% {
+    bottom: 0;
+    opacity: 1;
+  }
+
+  30% {
+    transform: translateX(30px);
+  }
+
+  50% {
+    opacity: .8;
+  }
+
+  100% {
+    bottom: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes movimiento {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }

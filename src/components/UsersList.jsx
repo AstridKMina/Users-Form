@@ -1,32 +1,39 @@
 import React from 'react';
 
-const UsersList =  ({ users, selectUser, deleteUser}) => {
-    return (
-        <div className='carslist'>
-            {users.map(user => (
-                <li key={user.id}>
-                    <div>
-                        <h3>Email: {user.email}</h3>
-                    </div>
-                    <div>
-                        <h3>Password: {user.password}</h3>
-                    </div>
-                    <div>
-                        <h3>First Name: {user.first_name}</h3>
-                    </div>
-                    <div>
-                        <h3>Last Name: {user.last_name}</h3>
-                    </div>
-                    <div>
-                        <h3>Birthday: {user.birthday}</h3>
-                    </div>
-                    
-                    <button onClick={() => selectUser(user)}> Edit</button>
-                    <button onClick={() => deleteUser(user.id)}> Delete </button>
+const UsersList = ({ users, selectUser, deleteUser }) => {
 
-                </li>
+
+    return (
+
+        <div className='userslist'>
+            {users.map(user => (
+                <div className='division' key={user.id}>
+                    <div className='myDivision'>
+                        <h2>Information <i className="fa-solid fa-circle-info"></i></h2>
+                        <li >
+                            <p><span> First Name:</span> {user.first_name}</p>
+
+                            <p><span>Last Name:</span> {user.last_name}</p>
+
+                            <p><span>Email:</span> {user.email}</p>
+
+                            <p><span>Password:</span> {user.password}</p>
+
+                            <p><span>Birthday:</span> {user.birthday}</p>
+                        </li>
+                    </div>
+                    <div className='buttons'>
+                        <button className='button' onClick={() => selectUser(user)}><i className="fa-solid fa-pen"></i></button >
+
+                        <button className='button' onClick={() => deleteUser(user.id)}><i className="fa-solid fa-trash-can"></i></button >
+                    </div>
+
+                </div>
+
             ))}
-        </div>
+
+        </div >
+
     );
 };
 

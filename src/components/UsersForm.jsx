@@ -28,11 +28,11 @@ const UsersForm = ({ getUsers, userSelected, deselectUser }) => {
         const user = {
             email: email,
             password: password,
-            firstName: firstName,
-            lastName,
-            birthday
-
+            first_name: firstName,
+            last_name: lastName,
+            birthday,
         }
+
         if (userSelected !== null) {
             alert("Actualizando");
             axios
@@ -68,46 +68,47 @@ const UsersForm = ({ getUsers, userSelected, deselectUser }) => {
 
 
     return (
-        <div>
+        <div className='userform'>
             <form onSubmit={submit}>
-                <h1>Users Form</h1>
-                <div>
-                    <label htmlFor="email"> Email </label>
+                <h1><i className="fa-solid fa-user"></i></h1>
+                <div className='divInput'>
+                    <label htmlFor="firstName"> <i className="fa-solid fa-spell-check"></i></label>
                     <input type="text"
+                        id='firstName'
+                        value={firstName} placeholder="First Name"
+                        onChange={e => setFirstName(e.target.value)} />
+
+                    <label htmlFor="lastName"> <i className="fa-solid fa-spell-check"></i></label>
+                    <input type="text"
+                        id='lastName'
+                        value={lastName} placeholder="Last Name"
+                        onChange={e => setLastName(e.target.value)} />
+                </div>
+                <div className='divInput'>
+                    <label htmlFor="email"> <i className="fa-solid fa-envelope"></i> </label>
+                    <input className='myInput' type="text"
                         id='email'
-                        value={email}
+                        value={email} placeholder="Email"
                         onChange={e => setEmail(e.target.value)} />
 
                 </div>
-                <div>
-                    <label htmlFor="password"> Password </label>
-                    <input type="text"
+                <div className='divInput'>
+                    <label htmlFor="password"> <i className="fa-solid fa-lock"></i></label>
+                    <input className='myInput' type="password"
                         id='password'
-                        value={password}
+                        value={password} placeholder="Password"
                         onChange={e => setPassword(e.target.value)} />
                 </div>
-                <div>
-                    <label htmlFor="firstName"> First Name </label>
-                    <input type="text"
-                        id='firstName'
-                        value={firstName}
-                        onChange={e => setFirstName(e.target.value)} />
-                </div>
-                <div>
-                    <label htmlFor="lastName"> Last Name </label>
-                    <input type="number"
-                        id='lastName'
-                        value={lastName}
-                        onChange={e => setLastName(e.target.value)} />
-                </div>
-                <div>
-                    <label htmlFor="birthday"> Birthday </label>
-                    <input type="date"
+                <div className='divInput'>
+                    <label htmlFor="birthday"><i className="fa-solid fa-cake-candles"></i></label>
+                    <input className='myInput' type="date"
                         id='birthday'
                         value={birthday}
                         onChange={e => setBirthday(e.target.value)} />
                 </div>
-                <button>Submit</button>
+                <div className='btn'>
+                    <button >Upload</button>
+                </div>
             </form>
 
         </div >
